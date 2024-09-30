@@ -1,4 +1,5 @@
-# TabKANet: KAN-based Numerical Embedding Module Makes Great Difference
+# TabKANet: Tabular Data Modeling with Kolmogorov-Arnold Network and Transformer
+
 
 Table of content
 
@@ -12,6 +13,8 @@ Table of content
 ## Motivation
 
 **We introduce TabKANet, a novel model that leverages a KAN-based Numerical Embedding Module and Transformer to overcome neural networks' limitations in tabular data.**
+
+
 
 ## Modules
 
