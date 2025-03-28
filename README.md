@@ -72,7 +72,7 @@ This repository includes the source code for the following models:
 - TabTransformer
 - MLP
 - KAN
-- TabKANet
+- TabKANet and TabMLPNet
 
 ## Evaluation Scripts
 
