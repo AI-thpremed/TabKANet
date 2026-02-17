@@ -14,8 +14,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 parser = argparse.ArgumentParser()
 
 parser.add_argument('--fold', default="1",type=str)
-parser.add_argument('--dataset', default="credit",type=str, help="choose from  [  bankmarketing  onlineshoper seismic credit  biodeg]")
-parser.add_argument('--modelname',default="tabmlpnet", type=str, help="choose from")
+parser.add_argument('--dataset', default="bankmarketing",type=str, help="choose from  [  bankmarketing  onlineshoper seismic credit  biodeg]")
+parser.add_argument('--modelname',default="tabkanet", type=str, help="choose from [tabkanet  tabmlpnet]")
 parser.add_argument('--noise',default=True, type=bool)
 parser.add_argument('--gpunum',default=0, type=int)
 parser.add_argument('--dim',default=64, type=int)
@@ -43,11 +43,11 @@ elif args.modelname=="tabmlpnet":
 elif args.modelname=="tabkanet":
     model_object =  TabKANet 
 
-print(fold)
-print(args.modelname)
-print(args.dataset)
-print(args.batch)
-print("Noise:"+str(args.noise))
+# print(fold)
+# print(args.modelname)
+# print(args.dataset)
+# print(args.batch)
+# print("Noise:"+str(args.noise))
 
 
 output_dim = 2
@@ -158,11 +158,11 @@ def train_model():
 
 
 
-    train_data = pd.read_csv('/data/gaowh/work/24process/tab-transformer/use_tabtransformers/templates/'+key+'/Fold'+fold+'/train.csv').fillna('EMPTY')
+    train_data = pd.read_csv(r'G:\Github-folder\tabkanet\TabKANet\templates/'+key+'/Fold'+fold+'/train.csv').fillna('EMPTY')
 
-    test_data = pd.read_csv('/data/gaowh/work/24process/tab-transformer/use_tabtransformers/templates/'+key+'/Fold'+fold+'/test.csv').fillna('EMPTY')
+    test_data = pd.read_csv(r'G:\Github-folder\tabkanet\TabKANet\templates/'+key+'/Fold'+fold+'/test.csv').fillna('EMPTY')
 
-    val_data = pd.read_csv('/data/gaowh/work/24process/tab-transformer/use_tabtransformers/templates/'+key+'/Fold'+fold+'/val.csv').fillna('EMPTY')
+    val_data = pd.read_csv(r'G:\Github-folder\tabkanet\TabKANet\templates/'+key+'/Fold'+fold+'/val.csv').fillna('EMPTY')
 
     if args.modelname=="FeatureTokenizerTransformer" :
         for feature in continuous_features:
