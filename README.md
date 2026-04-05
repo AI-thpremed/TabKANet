@@ -1,5 +1,8 @@
+
+
 # TabKANet: Tabular Data Modeling with Kolmogorov-Arnold Network and Transformer
 
+ The detail of the paper can be found in https://www.sciencedirect.com/science/article/pii/S0950705125017368
 
 
 
